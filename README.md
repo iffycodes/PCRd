@@ -74,7 +74,7 @@ Example:
 -v <volume>  = Hex range from 00 to FF
 -O           = Radio OFF
 -d <port>    = Serial port (default: /dev/ttyUSB0)
--A <0|1>     = AGC (0=Off, 1=Slow)
+-A <0|1>     = AGC (0=Slow, 1=Fast)
 -N <0|1>     = Noise Blanker (0=Off, 1=On)
 -S <0|1>     = RF Attenuator (0=Off, 1=On)
 -I <00-FF>   = IF Shift (80 is center)
