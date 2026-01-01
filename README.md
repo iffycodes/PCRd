@@ -8,15 +8,13 @@ ICOM PCR-1000 Radio Control Software - Unix daemon and command-line interface fo
 
 PCRd is a Unix program that provides command-line and daemon mode control of ICOM PCR-1000 radio receiver via serial port. It supports socket-based remote control, making it ideal for controlling a radio located anywhere on your network.
 
-**Source**: This package originally came from https://www.crc.id.au/pcrd-pcr1000-on-linux/
-
-**Note**: The original source code has been modified from the original version.
+**Source**: This package originally came from https://www.crc.id.au/pcrd-pcr1000-on-linux/ and has been adapted.
 
 ## Project Structure
 
 - `pcrd.c` - Main source code
 - `pcrd.h` - Header file with structure definitions, constants, and function prototypes
-- `Makefile` - Build system with support for Linux and FreeBSD
+- `Makefile` - Build system for Linux and FreeBSD
 - `LICENSE` - GNU GPL v2 license
 - `README.md` - This file
 - `RELEASE_NOTES.md` - Detailed version history
@@ -38,13 +36,11 @@ PCRd is a Unix program that provides command-line and daemon mode control of ICO
 
 ## Building
 
-PCRd includes a Makefile with targets for multiple platforms:
+PCRd includes a Makefile with the following targets:
 
 ```bash
 make linux          # Build for Linux (release)
 make debug_linux     # Build for Linux with debug symbols
-make freebsd         # Build for FreeBSD (release)
-make debug_freebsd   # Build for FreeBSD with debug symbols
 make clean           # Remove compiled binary
 ```
 
@@ -178,10 +174,10 @@ This program is released under the GNU General Public License Version 2. See LIC
 
 ## Credits
 
-- **Original Author**: Carl Walker (cwalker@icmp.com) - Version 0.10
+- **Original work**: pcr.c by sili@l0pht.com - http://www3.l0pht.com/~sili/pcr.html
+- **Next Author**: Carl Walker (cwalker@icmp.com) - Version 0.10
 - **Updated to v0.12**: Steven Haigh - http://www.crc.id.au/pcrd
 - **Updated to v0.13**: Code modernization, cleanup, and documentation updates
-- **Original work**: pcr.c by sili@l0pht.com - http://www3.l0pht.com/~sili/pcr.html
 
 ## Support
 

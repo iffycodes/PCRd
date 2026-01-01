@@ -6,33 +6,23 @@
 **Website**: http://www.crc.id.au/pcrd
 **Status**: Legacy software maintained for historical compatibility
 
-### Version 0.13 Changes (2024)
+### Version 0.13 Changes (2026)
 
 - Fixed all compiler warnings for clean build on modern systems
 - Created pcrd.h header file with structure definitions and function prototypes
-- Removed Solaris support (now supports Linux and FreeBSD only)
+- Removed Solaris support (supports Linux and FreeBSD)
 - Changed default serial port to /dev/ttyUSB0
 - Updated Makefile: renamed 'foo' target to 'help', made 'linux' the default target
 - Fixed format string warnings and type safety issues
 - Improved code organization and maintainability
 - Updated all documentation to reflect current state
-- Removed platform-specific preprocessor conditionals
+- Removed platform-specific preprocessor conditionals (same build for Linux and FreeBSD)
 
 ### Version 0.12 Changes (2006)
 
 - Updated source code to compile with modern GCC versions
 - Should now compile on most modern Linux distributions
 - Code cleanup and compatibility fixes
-
-### Version 0.12 Updates (Current)
-
-- Fixed all compiler warnings for clean build
-- Created pcrd.h header file with structure definitions and function prototypes
-- Removed Solaris support (now supports Linux and FreeBSD only)
-- Changed default serial port to /dev/ttyUSB0
-- Updated documentation and build system
-- Fixed format string warnings and type safety issues
-- Improved code organization and maintainability
 
 ---
 
@@ -232,11 +222,7 @@ The project evolved from a simple command-line tool (pcr.c by sili@l0pht.com) in
 
 ### Platform Support
 
-The software supports multiple Unix platforms:
-- Linux (primary development platform)
-- FreeBSD
-
-Each platform has specific serial port defaults handled through preprocessor directives. Default serial port is `/dev/ttyUSB0` for all platforms.
+The software supports Linux and FreeBSD with the same POSIX-compliant codebase. No platform-specific build targets are required. Default serial port is `/dev/ttyUSB0`.
 
 ### Note from Original Author
 
