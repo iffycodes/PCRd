@@ -1323,9 +1323,6 @@ int argc_socket;
   /* and, for good measure, make sure the alarm signal is off */
   alarm_disable();
 
-  sprintf( cmd_line.port,"/dev/ttyUSB0" );
-  /* default to USB serial device */
-   
   /* init the pointers for the socket command line parser */
   argv_buf_ptr[ 0 ] =  (char *)&argv_buf.cmd0;
   argv_buf_ptr[ 1 ] =  (char *)&argv_buf.cmd1;
@@ -1358,6 +1355,9 @@ int argc_socket;
 
   /* zero out the command line data structure */
   memset( &cmd_line, 0, sizeof( cmd_line ) );
+
+  sprintf( cmd_line.port,"/dev/ttyUSB0" );
+  /* default to USB serial device */
 
   /* reset this silly counter */
   rpt.count = 0;
